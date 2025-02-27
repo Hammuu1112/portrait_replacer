@@ -1,0 +1,17 @@
+{
+  "title": "Portrait Replacer",
+  "directory path": "BDO retrato caminho do diretório",
+  "new version available": "Nova versão disponível",
+  "detail": "Detalhes",
+  "start": "Iniciar",
+  "exit": "Sair",
+  "empty": "Não há itens a serem exibidos.",
+  "fill" : "Preencher com um",
+  "reset all portraits": "Redefinir tudo",
+  "hidden portraits": "Retratos ocultos",
+  "config": "Configuração",
+  "width": "Largura",
+  "drag delay": "Atraso no início do arrasto (ms)",
+  "save": "Salvar",
+  "processing": "Processamento"
+}

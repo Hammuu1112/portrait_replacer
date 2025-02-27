@@ -1,0 +1,17 @@
+{
+  "title": "Portrait Replacer",
+  "directory path": "BDO portre dizin yolu",
+  "new version available": "Yeni sürüm mevcut",
+  "detail": "Detay",
+  "start": "Başlangıç",
+  "exit": "Çıkış",
+  "empty": "Gösterilecek öğe yok.",
+  "fill" : "Bir tane ile doldurun",
+  "reset all portraits": "Tümünü sıfırla",
+  "hidden portraits": "Gizli portreler",
+  "config": "Konfigürasyon",
+  "width": "Genişlik",
+  "drag delay": "Sürükleme başlangıç gecikmesi (ms)",
+  "save": "Kaydet",
+  "processing": "İşleme"
+}

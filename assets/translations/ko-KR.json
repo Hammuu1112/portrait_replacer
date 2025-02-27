@@ -1,0 +1,17 @@
+{
+  "title": "Portrait Replacer",
+  "directory path": "검은사막 초상화 폴더 경로",
+  "new version available": "업데이트 사용 가능",
+  "detail": "자세히",
+  "start": "시작",
+  "exit": "종료",
+  "empty": "표시할 항목이 없습니다.",
+  "fill" : "하나로 채우기",
+  "reset all portraits": "모든 초상화 초기화",
+  "hidden portraits": "숨겨진 초상화",
+  "config": "구성",
+  "width": "너비",
+  "drag delay": "드래그 시작 지연 (밀리초)",
+  "save": "저장",
+  "processing": "처리중"
+}

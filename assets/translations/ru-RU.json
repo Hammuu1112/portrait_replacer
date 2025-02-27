@@ -1,0 +1,17 @@
+{
+  "title": "Portrait Replacer",
+  "directory path": "BDO портрет путь к каталогу",
+  "new version available": "Доступна новая версия",
+  "detail": "Деталь",
+  "start": "Запустить",
+  "exit": "Выход",
+  "empty": "Нет элементов для отображения.",
+  "fill" : "Заполните одним",
+  "reset all portraits": "Сбросить все",
+  "hidden portraits": "Скрытые портреты",
+  "config": "Конфигурация",
+  "width": "Ширина",
+  "drag delay": "Задержка начала перетаскивания (мс)",
+  "save": "Сохранить",
+  "processing": "Обработка"
+}

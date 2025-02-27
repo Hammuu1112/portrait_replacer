@@ -1,0 +1,17 @@
+{
+  "title": "Portrait Replacer",
+  "directory path": "BDO ポートレート ディレクトリパス",
+  "new version available": "新バージョン",
+  "detail": "詳細",
+  "start": "開始",
+  "exit": "終了",
+  "empty": "表示する項目がありません。",
+  "fill" : "1つで埋める",
+  "reset all portraits": "すべてリセット",
+  "hidden portraits": "非表示の肖像",
+  "config": "構成",
+  "width": "幅",
+  "drag delay": "ドラッグ開始遅延時間 (ms)",
+  "save": "保存",
+  "processing": "処理"
+}

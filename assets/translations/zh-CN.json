@@ -1,0 +1,17 @@
+{
+  "title": "Portrait Replacer",
+  "directory path": "BDO 肖像 目录路径",
+  "new version available": "新版本可用",
+  "detail": "详细信息",
+  "start": "开始",
+  "exit": "退出",
+  "empty": "没有要显示的项目。",
+  "fill" : "填充一个",
+  "reset all portraits": "重置所有肖像",
+  "hidden portraits": "隐藏肖像",
+  "config": "配置",
+  "width": "宽度",
+  "drag delay": "拖动启动延迟（毫秒）",
+  "save": "保存",
+  "processing": "处理"
+}
