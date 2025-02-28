@@ -24,7 +24,8 @@ class PortraitReplacerScreen extends StatefulWidget {
   State<PortraitReplacerScreen> createState() => _PortraitReplacerScreenState();
 }
 
-class _PortraitReplacerScreenState extends State<PortraitReplacerScreen> with WindowListener{
+class _PortraitReplacerScreenState extends State<PortraitReplacerScreen>
+    with WindowListener {
   @override
   void initState() {
     super.initState();
@@ -42,7 +43,7 @@ class _PortraitReplacerScreenState extends State<PortraitReplacerScreen> with Wi
   @override
   void dispose() {
     windowManager.removeListener(this);
-    super.dispose();//
+    super.dispose(); //
   }
 
   @override
@@ -119,13 +120,13 @@ class _PortraitReplacerScreenState extends State<PortraitReplacerScreen> with Wi
                 onPressed: () => openUrl(ExternalLinks.github),
                 icon: Icon(FontAwesomeIcons.github),
               ),
-              context.locale == Locale('ko', 'KR') ?
-              IconButton(
-                onPressed: () => openUrl(ExternalLinks.karanda),
-                icon: ImageIcon(AssetImage("assets/karanda.png")),
-              ) : const SizedBox(),
+              context.locale == Locale('ko', 'KR')
+                  ? IconButton(
+                    onPressed: () => openUrl(ExternalLinks.karanda),
+                    icon: ImageIcon(AssetImage("assets/karanda.png")),
+                  )
+                  : const SizedBox(),
             ],
-            actionsPadding: EdgeInsets.only(right: 12),
           ),
           body: Row(
             crossAxisAlignment: CrossAxisAlignment.center,

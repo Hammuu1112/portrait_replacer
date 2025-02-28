@@ -5,7 +5,7 @@ class UserConfigDataService {
 
   UserConfigDataService({required String path}) : _key = path;
 
-  String get _widthKey => "$_key-width";
+  String get _widthKey => "$_key-portrait width";
 
   String get _dragDelayKey => "drag delay";
 

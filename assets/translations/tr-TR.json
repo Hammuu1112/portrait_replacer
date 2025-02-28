@@ -10,7 +10,8 @@
   "reset all portraits": "Tümünü sıfırla",
   "hidden portraits": "Gizli portreler",
   "config": "Konfigürasyon",
-  "width": "Genişlik",
+  "image width": "Görüntü genişliği",
+  "image width hint text": "Zaten yüklenmiş olan görüntülere uygulanmaz.",
   "drag delay": "Sürükleme başlangıç gecikmesi (ms)",
   "save": "Kaydet",
   "processing": "İşleme"

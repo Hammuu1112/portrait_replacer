@@ -12,7 +12,6 @@ class BackgroundImageWidget extends StatelessWidget {
           right: 0,
           child: Container(
             width: 720,
-            //height: 720,
             height: MediaQuery.sizeOf(context).height,
             decoration: BoxDecoration(
               gradient: LinearGradient(

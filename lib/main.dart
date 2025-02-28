@@ -77,10 +77,14 @@ class MyApp extends StatelessWidget {
             seedColor: Colors.indigo,
             brightness: Brightness.dark,
           ),
+          appBarTheme: AppBarTheme(actionsPadding: EdgeInsets.only(right: 12)),
           sliderTheme: SliderThemeData(year2023: false),
           progressIndicatorTheme: ProgressIndicatorThemeData(year2023: false),
           bottomSheetTheme: BottomSheetThemeData(
             constraints: BoxConstraints(maxWidth: 1280),
+          ),
+          inputDecorationTheme: InputDecorationTheme(
+            border: OutlineInputBorder(),
           ),
         ),
         home: StartingScreen(),

@@ -4,7 +4,8 @@ class ExternalLinks {
   static String discord = "https://discord.gg/8ZRAMGdcYG";
   static String github = "https://github.com/Hammuu1112/portrait_replacer";
   static String karanda = "https://karanda.kr";
-  static String latestRelease = "https://github.com/Hammuu1112/portrait_replacer/releases/latest";
+  static String latestRelease =
+      "https://github.com/Hammuu1112/portrait_replacer/releases/latest";
   static String latestVersion =
       "https://api.github.com/repos/hammuu1112/portrait_replacer/releases/latest";
 }

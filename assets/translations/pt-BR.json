@@ -10,7 +10,8 @@
   "reset all portraits": "Redefinir tudo",
   "hidden portraits": "Retratos ocultos",
   "config": "Configuração",
-  "width": "Largura",
+  "image width": "Largura da imagem",
+  "image width hint text": "Não se aplica às imagens já carregadas.",
   "drag delay": "Atraso no início do arrasto (ms)",
   "save": "Salvar",
   "processing": "Processamento"

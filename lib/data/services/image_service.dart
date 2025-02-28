@@ -1,18 +1,18 @@
 import 'dart:typed_data';
-
 import 'package:image/image.dart' as img;
-
 import 'package:portrait_replacer/utils/result.dart';
+import 'dart:developer' as developer;
 
 class ImageService {
   Future<Result<img.Image>> getImageFromPath(String path) async {
     img.Image? image = await img.decodeImageFile(path);
-    if(image?.hasAnimation ?? false){
+    if (image?.hasAnimation ?? false) {
       image!.frames = image.frames.take(1).toList();
     }
     if (image != null) {
       return Result.ok(image);
     }
+    developer.log("Failed to decode image. Path: $path");
     return Result.error(Exception("Failed to decode image. Path: $path"));
   }
 
@@ -20,6 +20,8 @@ class ImageService {
 
   Uint8List imageToBytes(img.Image image) => img.encodePng(image);
 
+  /// Returns a resized `img.Image`.
+  /// Because of the [Fill with one] option, it does not preserve the image size ratio.
   img.Image resizeImage(img.Image image, int width, int height) {
     if (image.width != width || image.height != height) {
       return img.copyResize(

@@ -10,7 +10,8 @@
   "reset all portraits": "重設所有肖像",
   "hidden portraits": "隱藏肖像",
   "config": "設定",
-  "width": "寬度",
+  "image width": "圖片寬度",
+  "image width hint text": "不適用於已經加載的圖片。",
   "drag delay": "拖曳開始延遲 (ms)",
   "save": "儲存",
   "processing": "處理"

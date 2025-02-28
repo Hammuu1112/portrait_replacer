@@ -10,7 +10,8 @@
   "reset all portraits": "すべてリセット",
   "hidden portraits": "非表示の肖像",
   "config": "構成",
-  "width": "幅",
+  "image width": "画像の幅",
+  "image width hint text": "すでに読み込まれた画像には適用されません。",
   "drag delay": "ドラッグ開始遅延時間 (ms)",
   "save": "保存",
   "processing": "処理"

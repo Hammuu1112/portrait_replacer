@@ -10,8 +10,9 @@
   "reset all portraits": "Reset all portraits",
   "hidden portraits": "Hidden portraits",
   "config": "Configuration",
-  "width": "Width",
-  "drag delay": "Drag start delay (ms)",
+  "image width": "Image Width",
+  "image width hint text": "Does not apply to images that are already loaded.",
+  "drag delay": "Drag Start Delay (ms)",
   "save": "Save",
   "processing": "Processing"
 }

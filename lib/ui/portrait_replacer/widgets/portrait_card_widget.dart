@@ -36,7 +36,7 @@ class _PortraitCardWidgetState extends State<PortraitCardWidget> {
       child: Stack(
         alignment: Alignment.center,
         children: [
-          Image.memory(widget.portrait.imageBytes),
+          Image.memory(widget.portrait.imageBytes, fit: BoxFit.fill),
           AnimatedOpacity(
             opacity: widget.loading ? 1.0 : 0.0,
             duration: Duration(milliseconds: 120),

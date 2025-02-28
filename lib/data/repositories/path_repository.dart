@@ -1,6 +1,6 @@
 import 'package:portrait_replacer/data/services/path_service.dart';
 
-class PathRepository{
+class PathRepository {
   final PathService _service;
   String path = "";
 
@@ -42,7 +42,7 @@ class PathRepository{
 
   Future<String?> selectDirectory() async {
     final selected = await _service.pickDirectory();
-    if(selected != null && selected.isNotEmpty){
+    if (selected != null && selected.isNotEmpty) {
       await savePath(selected);
     }
     return selected;

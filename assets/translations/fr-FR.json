@@ -10,7 +10,8 @@
   "reset all portraits": "Réinitialiser tout",
   "hidden portraits": "Portraits cachés",
   "config": "Configuration",
-  "width": "Largeur",
+  "image width": "Largeur de l'image",
+  "image width hint text": "Ne s'applique pas aux images déjà chargées.",
   "drag delay": "Délai de démarrage du glisser (ms)",
   "save": "Sauvegarder",
   "processing": "Traitement"

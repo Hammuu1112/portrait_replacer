@@ -10,7 +10,8 @@
   "reset all portraits": "Alle Porträts zurücksetzen",
   "hidden portraits": "Ausgeblendete Porträts",
   "config": "Konfiguration",
-  "width": "Breite",
+  "image width": "Bildbreite",
+  "image width hint text": "Gilt nicht für bereits geladene Bilder.",
   "drag delay": "Startverzögerung beim Ziehen (ms)",
   "save": "Speichern",
   "processing": "Verarbeitung"

@@ -39,7 +39,7 @@ class PortraitGridViewWidget extends StatelessWidget {
             },
             sliverGridDelegate:
                 SliverReorderableGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: controller.width,
+                  crossAxisCount: PortraitSpec.horizontalCount,
                   childAspectRatio: PortraitSpec.width / PortraitSpec.height,
                   mainAxisSpacing: 6.0,
                   crossAxisSpacing: 6.0,

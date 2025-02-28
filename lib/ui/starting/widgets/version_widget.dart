@@ -8,7 +8,7 @@ class VersionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 24.0),
+      padding: const EdgeInsets.only(right: 12.0),
       child: Text(
         context.select<StartingController, String>(
           (controller) => controller.version,

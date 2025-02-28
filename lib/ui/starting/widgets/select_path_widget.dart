@@ -17,10 +17,7 @@ class SelectPathWidget extends StatelessWidget {
             context.tr("directory path"),
             style: Theme.of(context).textTheme.titleLarge,
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: _TextFormField(),
-          ),
+          Padding(padding: const EdgeInsets.all(8.0), child: _TextFormField()),
         ],
       ),
     );
@@ -35,7 +32,6 @@ class _TextFormField extends StatelessWidget {
     return TextFormField(
       controller: context.watch<StartingController>().textEditingController,
       decoration: InputDecoration(
-        border: OutlineInputBorder(),
         hintText: r"ex) C:\Users\{User}\Documents\Black Desert\FaceTexture",
         suffixIcon: IconButton(
           onPressed: context.read<StartingController>().selectPath,
@@ -46,4 +42,3 @@ class _TextFormField extends StatelessWidget {
     );
   }
 }
-

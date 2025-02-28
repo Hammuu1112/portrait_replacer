@@ -1,3 +1,4 @@
+import 'package:portrait_replacer/utils/portrait_spec.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PortraitService {

@@ -6,8 +6,10 @@ class VersionRepository {
   Version? currentVersion;
   Version? latestVersion;
 
-  VersionRepository({required VersionCheckService service}) : _service = service;
+  VersionRepository({required VersionCheckService service})
+    : _service = service;
 
+  ///Returns `false` if [currentVersion] or [latestVersion] is `null`.
   bool get updateAvailable =>
       currentVersion == null || latestVersion == null
           ? false

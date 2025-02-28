@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:portrait_replacer/data/repositories/path_repository.dart';
 import 'package:portrait_replacer/data/repositories/version_repository.dart';
@@ -18,7 +17,9 @@ class StartingController extends ChangeNotifier {
   }
 
   bool get available => _pathRepository.path.isEmpty ? false : true;
+
   String get version => _versionRepository.currentVersion?.text ?? "";
+
   bool get updateAvailable => _versionRepository.updateAvailable;
 
   Future<void> _init() async {

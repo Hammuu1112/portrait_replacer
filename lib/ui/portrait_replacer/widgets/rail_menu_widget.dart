@@ -94,19 +94,19 @@ class _RailMenuWidgetState extends State<RailMenuWidget> {
         ],
         onDestinationSelected: (index) {
           switch (index) {
-            case 0:
+            case 0: //Fill with one
               fillWithOne();
               break;
-            case 1:
+            case 1: //Reset all
               showProcessingDialog(
                 stream:
                     context.read<PortraitReplacerController>().resetAllImage(),
               );
               break;
-            case 2:
+            case 2: //Hidden portraits
               showHiddenImageGroup();
               break;
-            case 3:
+            case 3: //Config
               showConfigMenu();
               break;
           }

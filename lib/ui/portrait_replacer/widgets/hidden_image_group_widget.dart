@@ -4,7 +4,7 @@ import 'package:portrait_replacer/data/models/portrait.dart';
 import 'package:portrait_replacer/ui/portrait_replacer/widgets/portrait_card_widget.dart';
 import 'package:portrait_replacer/utils/portrait_spec.dart';
 
-class HiddenImageGroupWidget extends StatefulWidget {
+class HiddenImageGroupWidget extends StatelessWidget {
   final List<Portrait> portraits;
   final void Function(int) showPortrait;
 
@@ -13,19 +13,6 @@ class HiddenImageGroupWidget extends StatefulWidget {
     required this.portraits,
     required this.showPortrait,
   });
-
-  @override
-  State<HiddenImageGroupWidget> createState() => _HiddenImageGroupWidgetState();
-}
-
-class _HiddenImageGroupWidgetState extends State<HiddenImageGroupWidget> {
-  late final List<Portrait> portraits;
-
-  @override
-  void initState() {
-    portraits = widget.portraits;
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,29 +30,62 @@ class _HiddenImageGroupWidgetState extends State<HiddenImageGroupWidget> {
           Expanded(
             child:
                 portraits.isNotEmpty
-                    ? Scrollbar(
-                  thumbVisibility: true,
-                      trackVisibility: true,
-                      child: ListView.builder(
-                        primary: true,
-                        scrollDirection: Axis.horizontal,
-                        padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 12.0),
-                        itemCount: portraits.length,
-                        itemBuilder: (context, index) {
-                          return _PortraitCard(
-                            portrait: portraits[index],
-                            onTap: () {
-                              setState(() {
-                                widget.showPortrait(index);
-                              });
-                            },
-                          );
-                        },
-                      ),
+                    ? _HorizontalPortraitList(
+                      portraits: portraits,
+                      showPortrait: showPortrait,
                     )
                     : Center(child: Text(context.tr("empty"))),
           ),
         ],
+      ),
+    );
+  }
+}
+
+class _HorizontalPortraitList extends StatefulWidget {
+  final List<Portrait> portraits;
+  final void Function(int) showPortrait;
+
+  const _HorizontalPortraitList({
+    super.key,
+    required this.portraits,
+    required this.showPortrait,
+  });
+
+  @override
+  State<_HorizontalPortraitList> createState() =>
+      _HorizontalPortraitListState();
+}
+
+class _HorizontalPortraitListState extends State<_HorizontalPortraitList> {
+  late final List<Portrait> portraits;
+
+  @override
+  void initState() {
+    portraits = widget.portraits;
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scrollbar(
+      thumbVisibility: true,
+      trackVisibility: true,
+      child: ListView.builder(
+        primary: true,
+        scrollDirection: Axis.horizontal,
+        padding: EdgeInsets.only(left: 8.0, right: 8.0, bottom: 12.0),
+        itemCount: portraits.length,
+        itemBuilder: (context, index) {
+          return _PortraitCard(
+            portrait: portraits[index],
+            onTap: () {
+              setState(() {
+                widget.showPortrait(index);
+              });
+            },
+          );
+        },
       ),
     );
   }

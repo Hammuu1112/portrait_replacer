@@ -10,7 +10,8 @@
   "reset all portraits": "모든 초상화 초기화",
   "hidden portraits": "숨겨진 초상화",
   "config": "구성",
-  "width": "너비",
+  "image width": "이미지 너비",
+  "image width hint text": "이미 로드된 이미지에는 적용되지 않습니다.",
   "drag delay": "드래그 시작 지연 (밀리초)",
   "save": "저장",
   "processing": "처리중"

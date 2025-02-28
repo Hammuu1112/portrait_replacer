@@ -4,9 +4,14 @@ class Version {
   final int patch;
   final String text;
 
-  Version({required this.major, required this.minor, required this.patch, required this.text});
+  Version({
+    required this.major,
+    required this.minor,
+    required this.patch,
+    required this.text,
+  });
 
-  factory Version.fromString(String value){
+  factory Version.fromString(String value) {
     final v = value.split(".");
     return Version(
       major: int.parse(v.first),
@@ -16,12 +21,13 @@ class Version {
     );
   }
 
-  bool isNewerThan(Version other){
-    if(major < other.major){
+  /// Returns `true` if the version of **this** is `newer than` or `equal` to **other**
+  bool isNewerThan(Version other) {
+    if (major < other.major) {
       return false;
-    } else if(minor < other.minor){
+    } else if (minor < other.minor) {
       return false;
-    } else if(patch < other.patch) {
+    } else if (patch < other.patch) {
       return false;
     }
     return true;
@@ -31,5 +37,4 @@ class Version {
   String toString() {
     return text;
   }
-
 }

@@ -1,8 +1,10 @@
 import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
 import 'package:portrait_replacer/data/models/portrait.dart';
 import 'package:portrait_replacer/data/repositories/path_repository.dart';
 import 'package:portrait_replacer/data/repositories/portrait_repository.dart';
 import 'package:portrait_replacer/data/repositories/user_config_data_repository.dart';
+import 'package:portrait_replacer/utils/portrait_spec.dart';
 
 class PortraitReplacerController extends ChangeNotifier {
   final PortraitRepository _portraitRepository;
@@ -14,7 +16,8 @@ class PortraitReplacerController extends ChangeNotifier {
     required UserConfigDataRepository userConfigDataRepository,
     required PathRepository pathRepository,
   }) : _portraitRepository = portraitRepository,
-       _userConfigDataRepository = userConfigDataRepository, _pathRepository = pathRepository {
+       _userConfigDataRepository = userConfigDataRepository,
+       _pathRepository = pathRepository {
     _init();
   }
 
@@ -46,8 +49,8 @@ class PortraitReplacerController extends ChangeNotifier {
     await _portraitRepository.savePortraitSequence();
   }
 
-  Future<void> updateWidth(double value) async {
-    final int parsed = value.toInt();
+  Future<void> updateWidth(String value) async {
+    final parsed = int.tryParse(value) ?? PortraitSpec.width;
     await _userConfigDataRepository.saveWidth(parsed);
     notifyListeners();
   }
@@ -59,16 +62,8 @@ class PortraitReplacerController extends ChangeNotifier {
   }
 
   Future<void> replacePortrait(String path, int index) async {
-    await _portraitRepository.replacePortrait(index, path);
+    await _portraitRepository.replacePortrait(index, path, width);
     notifyListeners();
-  }
-
-  Future<void> selectNewImage(int index) async {
-    final selected = await pickImage();
-    if (selected != null) {
-      await _portraitRepository.replacePortrait(index, selected);
-      notifyListeners();
-    }
   }
 
   Stream<double> fillWithOne(String path) async* {

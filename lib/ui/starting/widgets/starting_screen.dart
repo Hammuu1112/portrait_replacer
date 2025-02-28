@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:portrait_replacer/ui/core/ui/app_bar_title.dart';
@@ -35,15 +34,14 @@ class StartingScreen extends StatelessWidget {
                 backgroundColor: Colors.transparent,
                 appBar: AppBar(
                   title: AppBarTitle(),
-                  actions: [
-                    VersionWidget(),
-                  ],
+                  actions: [VersionWidget()],
                   backgroundColor: Colors.transparent,
                   surfaceTintColor: Colors.transparent,
                 ),
                 body: Flex(
                   direction: Axis.horizontal,
                   children: [
+                    /* Left (Select Language) */
                     Flexible(
                       flex: 1,
                       child: Card(
@@ -57,6 +55,7 @@ class StartingScreen extends StatelessWidget {
                         ),
                       ),
                     ),
+                    /* Right */
                     Flexible(
                       flex: 1,
                       child: Padding(
@@ -64,17 +63,19 @@ class StartingScreen extends StatelessWidget {
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            //Container(),
+                            /* Update Available Card */
                             UpdateCardWidget(),
+                            /* Select Path */
                             Column(
                               children: [
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: SelectPathWidget(),
                                 ),
+                                /* Start & Exit Buttons */
                                 _Buttons(),
                               ],
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -106,9 +107,7 @@ class _Buttons extends StatelessWidget {
     await windowManager.show();
 
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-        builder: (_) => PortraitReplacerScreen(),
-      ),
+      MaterialPageRoute(builder: (_) => PortraitReplacerScreen()),
     );
   }
 
@@ -125,10 +124,7 @@ class _Buttons extends StatelessWidget {
             child: Consumer<StartingController>(
               builder: (context, controller, child) {
                 return ElevatedButton(
-                  onPressed:
-                      controller.available
-                          ? () => start(context)
-                          : null,
+                  onPressed: controller.available ? () => start(context) : null,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.indigo,
                     foregroundColor: Colors.white,
